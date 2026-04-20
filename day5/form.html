@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Student Registraction Form</h1>
+    <form action ="/submit" method ="post">
+        <lable for ="name">Name:</lable><br>
+        <input type="text" id="name" name="name"><br><br>
+    
+        <lable for="email">Email:</lable><br>       
+        <input type="email" id="email" name="email"><br><br>
+
+        <lable for="age">Age:</lable><br>
+        <input type="number"id="age" name="age"><br><br>
+
+        <lable for="phone">phone:</lable><br>
+        <input type="tel"id="phone" name="phone"><br><br>
+
+        
+
+        <lable for="course">Course:</lable><br>
+        <select id="course" name ="course">
+            <option value="csit">CSIT</option>
+            <option value="bca">BCA</option>
+            <option value ="bsc">BSC</option>
+            <option value ="ba">BA</option>
+            <option value="bcom">BCOM</option>
+        </select><br><br>
+        
+        <input type="submit" value ="submit">
+
+    </form>
+
+</body>
+</html>
