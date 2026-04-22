@@ -1,0 +1,30 @@
+body {
+    font-family:Georgia;
+    background-color: rgb(238, 203, 203);
+    color: aliceblue;
+    line-height: 1.7;
+}
+
+h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.5px;
+}
+p{
+    margin-bottom: 14px;
+}
+
+.page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+#site-header {
+    background-color: rgb(241, 235, 235);
+    color: rgb(170, 50, 50);
+    padding: 48px 32px 36px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+    
