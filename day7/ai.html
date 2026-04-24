@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML & CSS Fundamentals</title>
+  <link rel="stylesheet" href="ai.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>HTML & CSS Fundamentals</h1>
+    <p>Text · Links · Images · Tables · Forms · Selectors · Box Model</p>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="card">
+    <h2>1. Text</h2>
+    <div class="underline"></div>
+
+    <p class="subheading">Headings & Paragraphs</p>
+
+    <p>
+      HTML provides <b>six heading levels</b> (h1–h6) and the humble
+      &lt;p&gt; tag for paragraphs.
+    </p>
+
+    <p>
+      You can mark text as <b>bold</b>, <i>italic</i>, <u>underlined</u>.
+      For inline code: <code>color: red;</code>
+    </p>
+
+    <blockquote>
+      "First, solve the problem. Then, write the code."
+    </blockquote>
+
+    <div class="tags">
+      <span class="html">HTML</span>
+      <span class="css">CSS</span>
+      <span class="basic">BASIC</span>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="card">
+    <h2>2. Links</h2>
+    <div class="underline"></div>
+
+    <p>
+      Links use the <code>&lt;a href=""&gt;</code> tag.
+    </p>
+
+    <p>
+      <a href="https://developer.mozilla.org" target="_blank">→ MDN Web Docs</a>
+      <a href="https://www.w3schools.com" target="_blank">→ W3Schools</a>
+      <a href="mailto:test@example.com">→ Send an Email</a>
+      <a href="#">→ Back to Top</a>
+    </p>
+  </div>
+
+</body>
+</html>
+<!-- Section 3: Images -->
+<div class="card">
+  <h2>3. Images</h2>
+  <div class="underline"></div>
+
+  <p>
+    Images use <code>&lt;img src="" alt=""&gt;</code>. Always include alt text.
+  </p>
+
+  <div class="image-grid">
+    <div class="image-item">
+      <img src="https://picsum.photos/400/250?random=1" alt="Mountain">
+      <p>Mountain — via Lorem Picsum</p>
+    </div>
+
+    <div class="image-item">
+      <img src="https://picsum.photos/400/250?random=2" alt="Forest">
+      <p>Forest — via Lorem Picsum</p>
+    </div>
+
+    <div class="image-item">
+      <img src="https://picsum.photos/400/250?random=3" alt="Ocean">
+      <p>Ocean — via Lorem Picsum</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 4: Tables -->
+<div class="card">
+  <h2>4. Tables</h2>
+  <div class="underline"></div>
+
+  <p>
+    Tables organize data into rows (<code>&lt;tr&gt;</code>), header cells
+    (<code>&lt;th&gt;</code>), and data cells (<code>&lt;td&gt;</code>).
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tag</th>
+        <th>Full Name</th>
+        <th>Purpose</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&lt;p&gt;</td>
+        <td>Paragraph</td>
+        <td>Block of text content</td>
+        <td>Block</td>
+      </tr>
+      <tr>
+        <td>&lt;a&gt;</td>
+        <td>Anchor</td>
+        <td>Hyperlink to another resource</td>
+        <td>Inline</td>
+      </tr>
+      <tr>
+        <td>&lt;img&gt;</td>
+        <td>Image</td>
+        <td>Embeds an image</td>
+        <td>Inline</td>
+      </tr>
+      <tr>
+        <td>&lt;table&gt;</td>
+        <td>Table</td>
+        <td>Tabular data layout</td>
+        <td>Block</td>
+      </tr>
+      <tr>
+        <td>&lt;form&gt;</td>
+        <td>Form</td>
+        <td>User input container</td>
+        <td>Block</td>
+      </tr>
+      <tr>
+        <td>&lt;div&gt;</td>
+        <td>Division</td>
+        <td>Generic container / layout</td>
+        <td>Block</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms</title>
+  <link rel="stylesheet" href="ai.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>5. Forms</h2>
+  <p>Forms collect user data with various input types.</p>
+
+  <form>
+    <div class="row">
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" placeholder="e.g. Aarav">
+      </div>
+
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" placeholder="e.g. Sharma">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@example.com">
+      </div>
+
+      <div class="field">
+        <label>Age</label>
+        <input type="number" placeholder="25">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label>Country</label>
+        <select>
+          <option>-- Select --</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" placeholder="Min 8 characters">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Short Bio</label>
+      <textarea placeholder="Tell us about yourself..."></textarea>
+    </div>
+
+    <div class="field">
+      <label>Interests</label>
+      <div class="inline">
+        <label><input type="checkbox"> HTML</label>
+        <label><input type="checkbox"> CSS</label>
+        <label><input type="checkbox"> JavaScript</label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Experience Level</label>
+      <div class="inline">
+        <label><input type="radio" name="exp" checked> Beginner</label>
+        <label><input type="radio" name="exp"> Intermediate</label>
+        <label><input type="radio" name="exp"> Advanced</label>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button type="submit" class="submit">Submit Form</button>
+      <button type="reset" class="reset">Reset</button>
+    </div>
+
+    <p class="note">* All fields marked required must be filled before submitting.</p>
+  </form>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="ai.css">
+</head>
+<body>
+
+    <h1 id="main-title">Welcome to CSS</h1>
+
+    <p>This is a paragraph.</p>
+
+    <div class="box">
+        <p>Inside a box</p>
+    </div>
+
+</body>
+</html>

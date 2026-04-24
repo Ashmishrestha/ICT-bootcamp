@@ -28,3 +28,35 @@ p{
     overflow: hidden;
 }
     
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid brown;
+}
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: brown;
+}
+.section {
+    margin-bottom: 52px;
+    padding-bottom: 28px 32px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 2px 8px cornflowerblue;
+}
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0,72rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-right: 6px;
+}
+.badge-red { background: rgb(218, 136, 150); color:rgb(202, 99, 99)}
+.badge-blue {background: rgb(209, 137, 149);color:rgb(88, 88, 207) ;}
+.badge-green {background: rgb(206, 169, 175);color: rgb(141, 209, 141);}
+

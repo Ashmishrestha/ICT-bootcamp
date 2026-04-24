@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body>
+    <h1>Click the button</h1>
+    <button onclick="alert('Hello')">click Me</button>
+
+    <h1 id="text">Hello World</h1>
+    <button onclick="changetext()">click to change</button>
+
+    <script>
+        function changetext(){
+            document.getElementById("text").innerHTML="Hello Ashmi"
+        }
+    </script>
+</body>
+</html>
