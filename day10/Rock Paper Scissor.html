@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+
+    <button onclick="
+    user='rock';
+    computer =options[Math.floor(Math.random()*3)];
+    if (user==computer) {
+        result='Draw';
+    }
+    else if (computer== 'paper') {
+        result='You Loose';
+    }
+    else if(computer== 'scissor') {
+        result='You Win';
+    }
+    document.getElementById('user').innerHTML='You : '+ user;
+    document.getElementById('computer').innerHTML='computer :' + computer;
+    document.getElementById('Result').innerHTML='Result :' + result;
+    ">rock</button>
+
+    <button onclick="
+    user='paper';
+    computer=options[Math.floor(Math.random()*3)];
+    if(user=='computer') {
+        result='Draw';
+    }
+    else if(computer=='rock') {
+        result=' You Win';
+    }
+    else if(computer=='scissor') {
+        result='You Loose';
+    }
+    document.getElementById('user').innerHTML='You : '+ user;
+    document.getElementById('computer').innerHTML='computer :' + computer;
+    document.getElementById('Result').innerHTML='Result :' + result;
+    ">Paper</button>
+
+
+<button onclick="
+user='scissor'; 
+computer=options [Math.floor(Math.random()*3)];
+if(user=='computer') {
+    result='Draw';
+}
+else if(computer=='rock') {
+    result='You Loose';
+}
+else if(computer=='scissor') {
+    result='You Win';
+}
+    document.getElementById('user').innerHTML='You : '+ user;
+    document.getElementById('computer').innerHTML='computer :' + computer;
+    document.getElementById('Result').innerHTML='Result :' + result;
+    ">Scissor</button>
+
+    <h3 id="user"></h3>
+    <h3 id="computer"></h3>
+    <h2 id="Result"></h2>
+
+    <script>
+        var options =['rock','paper','scissor'];
+        var user;
+        var computer;
+        var Result;
+    </script>
+
+</body>
+</html>
