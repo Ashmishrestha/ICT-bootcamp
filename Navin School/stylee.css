@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.hero {
+    background: lightgreen;
+    text-align: center;
+    padding: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 25%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px gray;
+}
+
+footer {
+    background: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 40px;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .rock {
+            background-color: #ff6b6b;
+        }
+
+        .paper {
+            background-color: #1dd1a1;
+        }
+
+        .scissor {
+            background-color: #feca57;
+        }
+
+        .result-box {
+            margin-top: 30px;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        #result {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .win {
+            color: #00ff88;
+        }
+
+        .lose {
+            color: #ff4d4d;
+        }
+
+        .draw {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎮 Rock Paper Scissors</h1>
+
+    <div class="container">
+        <button class="rock" onclick="playgame('rock')">✊ Rock</button>
+        <button class="paper" onclick="playgame('paper')">✋ Paper</button>
+        <button class="scissor" onclick="playgame('scissor')">✌ Scissor</button>
+    </div>
+
+    <div class="result-box">
+        <h3 id="user"></h3>
+        <h3 id="computer"></h3>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function playgame(choice) {
+            var user = choice;
+            var result;
+            var options = ['rock','paper','scissor'];
+            var computer = options[Math.floor(Math.random()*3)];
+
+            if (user == computer) {
+                result = "Draw";
+            }
+            else if (
+                (user=='rock' && computer=='scissor') ||
+                (user=='paper' && computer=='rock') ||
+                (user=='scissor' && computer=='paper')
+            ) {
+                result = 'You Win';
+            }
+            else {
+                result = 'You Lose';
+            }
+
+            document.getElementById('user').innerHTML = '👤 You: ' + user;
+            document.getElementById('computer').innerHTML = '💻 Computer: ' + computer;
+
+            let resultText = document.getElementById('result');
+            resultText.innerHTML = result;
+
+            // color change
+            resultText.className = "";
+            if (result === "You Win") resultText.classList.add("win");
+            else if (result === "You Lose") resultText.classList.add("lose");
+            else resultText.classList.add("draw");
+        }
+    </script>
+
+</body>
+</html>
